@@ -118,6 +118,30 @@ export async function getAllArticles(): Promise<ProcessedArticle[]> {
   return allArticles
 }
 
+const CATEGORIES = [
+  "recycling", "compliance", "itad", "data-destruction",
+  "esg", "materials", "localities", "glossary",
+]
+
+let _slugCategoryCache: Record<string, string> | null = null
+
+export function findArticleCategory(slug: string): string | null {
+  if (!_slugCategoryCache) {
+    _slugCategoryCache = {}
+    for (const cat of CATEGORIES) {
+      const catPath = path.join(contentRoot, cat)
+      if (fs.existsSync(catPath)) {
+        for (const file of fs.readdirSync(catPath)) {
+          if (file.endsWith(".mdx")) {
+            _slugCategoryCache[file.replace(".mdx", "")] = cat
+          }
+        }
+      }
+    }
+  }
+  return _slugCategoryCache[slug] ?? null
+}
+
 export function generateTableOfContents(content: string): Array<{ level: number; text: string; id: string }> {
   const headingRegex = /^(#{2,3})\s+(.+)$/gm
   const headings: Array<{ level: number; text: string; id: string }> = []

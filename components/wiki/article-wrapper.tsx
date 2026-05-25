@@ -4,10 +4,17 @@ import type React from 'react'
 import { Clock, User, Calendar, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
+interface ResolvedRelated {
+  slug: string
+  category: string
+  href: string
+}
+
 interface ArticleWrapperProps {
   children: React.ReactNode
   category: string
   categoryName: string
+  resolvedRelated?: ResolvedRelated[]
   metadata: {
     title: string
     category: string
@@ -91,9 +98,12 @@ export default function ArticleWrapper({
   children,
   category,
   categoryName,
+  resolvedRelated,
   metadata,
 }: ArticleWrapperProps) {
-  const relatedArticles = metadata.relatedArticles ?? []
+  const relatedArticles = resolvedRelated?.length
+    ? resolvedRelated
+    : (metadata.relatedArticles ?? []).map((slug) => ({ slug, category, href: `/wiki/${category}/${slug}` }))
   const keywords = metadata.keywords ?? []
   const serviceCta = SERVICE_CTAS[category]
 
@@ -163,13 +173,13 @@ export default function ArticleWrapper({
         <div className="mt-10 border-t border-gray-200 pt-8">
           <h3 className="mb-4 text-xl font-bold text-gray-900">Related Articles</h3>
           <div className="grid gap-4 md:grid-cols-3">
-            {relatedArticles.map((slug) => (
+            {relatedArticles.map((rel) => (
               <Link
-                key={slug}
-                href={`/wiki/${category}/${slug}`}
+                key={rel.slug}
+                href={rel.href}
                 className="rounded-lg border border-gray-200 p-4 hover:border-emerald-500 hover:bg-emerald-50 transition-all"
               >
-                <h4 className="font-semibold text-gray-900">{slugToTitle(slug)}</h4>
+                <h4 className="font-semibold text-gray-900">{slugToTitle(rel.slug)}</h4>
                 <p className="mt-2 text-sm text-gray-600">Continue reading →</p>
               </Link>
             ))}
