@@ -1,0 +1,10 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/wiki/[category]/[slug]/page": "app/wiki/[category]/[slug]/page.js",
+  "/wiki/[category]/page": "app/wiki/[category]/page.js",
+  "/wiki/entities/page": "app/wiki/entities/page.js",
+  "/wiki/glossary/[term]/page": "app/wiki/glossary/[term]/page.js",
+  "/wiki/updates/page": "app/wiki/updates/page.js"
+}
