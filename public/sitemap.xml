@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://example.com/wiki</loc>
+  </url>
+  <url>
+    <loc>https://example.com/wiki/recycling/what-is-e-waste-comprehensive-guide</loc>
+  </url>
+  <url>
+    <loc>https://example.com/wiki/recycling</loc>
+  </url>
+  <url>
+    <loc>https://example.com/wiki/glossary/cpcb</loc>
+  </url>
+  <url>
+    <loc>https://example.com/wiki/glossary/weee-rules</loc>
+  </url>
+  <url>
+    <loc>https://example.com/wiki/entities/example-entity</loc>
+  </url>
+  <url>
+    <loc>https://example.com/wiki/updates/2024-01-01-welcome</loc>
+  </url>
+  <url>
+    <loc>https://example.com/wiki/updates</loc>
+  </url>
+</urlset>
