@@ -4,6 +4,7 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { LenisProvider } from "@/components/lenis-provider"
 import ClickSpark from "@/components/click-spark"
+import { ChatWidgetEmbed } from "@/components/wiki/chat-widget-embed"
 import "./globals.css"
 
 const inter = Inter({
@@ -65,6 +66,7 @@ export default function RootLayout({
         >
           <LenisProvider>{children}</LenisProvider>
         </ClickSpark>
+        <ChatWidgetEmbed />
         <Analytics />
       </body>
     </html>
