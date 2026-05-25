@@ -13,7 +13,8 @@
   "dependencies": {
     "next": "^16.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "next-mdx-remote": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.6.0",
