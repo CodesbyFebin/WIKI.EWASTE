@@ -2,7 +2,7 @@ import WikiLayout from '@/components/wiki/wiki-layout'
 import ArticleWrapper from '@/components/wiki/article-wrapper'
 import EntitySidebar from '@/components/wiki/entity-sidebar'
 import { AIAnswer } from '@/components/wiki/ai-answer'
-import { getArticle, getAllArticlesInCategory } from '@/lib/wiki/mdx-processor'
+import { getArticle, getAllArticlesInCategory, findArticleCategory } from '@/lib/wiki/mdx-processor'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from 'next/link'
@@ -174,6 +174,11 @@ export default async function ArticlePage({
       ? generateHowToSchema(article.metadata.title, article.metadata.howToSteps)
       : null
 
+  const resolvedRelated = (article.metadata.relatedArticles ?? []).map((slug) => {
+    const cat = findArticleCategory(slug) ?? params.category
+    return { slug, category: cat, href: `/wiki/${cat}/${slug}` }
+  })
+
   return (
     <WikiLayout>
       {/* JSON-LD injection */}
@@ -205,6 +210,7 @@ export default async function ArticlePage({
             metadata={article.metadata}
             category={params.category}
             categoryName={categoryName}
+            resolvedRelated={resolvedRelated}
           >
             <MDXRemote
               source={autoLinkEntities(article.content, params.slug)}
