@@ -1,0 +1,24 @@
+{
+  "name": "wiki-ewaste",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "validate:links": "tsx scripts/validate-links.ts",
+    "lint": "eslint --ext .ts,.tsx . || true"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^3.12.7",
+    "typescript": "^5.5.0",
+    "eslint": "^8.50.0",
+    "@types/node": "^20.6.0"
+  }
+}
