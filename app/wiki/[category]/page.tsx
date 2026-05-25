@@ -15,8 +15,8 @@ export async function generateStaticParams() {
   return Array.from(cats).map((c) => ({ category: c }))
 }
 
-export default function CategoryPage({ params }: Props) {
-  const { category } = params
+export default async function CategoryPage({ params }: Props) {
+  const { category } = await params
   if (RESERVED_ROUTES.has(category)) return notFound()
 
   // check if category exists

@@ -12,8 +12,8 @@ export async function generateStaticParams() {
   return fs.readdirSync(dir).map((f) => ({ term: f.replace(/\.[^/.]+$/, '') }))
 }
 
-export default function GlossaryPage({ params }: Props) {
-  const { term } = params
+export default async function GlossaryPage({ params }: Props) {
+  const { term } = await params
   const route = `/wiki/glossary/${term}`
   if (!glossaryExists(route)) return notFound()
 

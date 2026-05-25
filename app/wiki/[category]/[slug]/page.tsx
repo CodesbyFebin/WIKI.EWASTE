@@ -22,8 +22,8 @@ export async function generateStaticParams() {
   return params
 }
 
-export default function ArticlePage({ params }: Props) {
-  const { category, slug } = params
+export default async function ArticlePage({ params }: Props) {
+  const { category, slug } = await params
   const route = `/wiki/${category}/${slug}`
   if (!articleExists(route)) return notFound()
 
