@@ -1,0 +1,88 @@
+# llms.txt - Retrieval Optimization for LLMs
+
+User-Agent: GPTBot
+User-Agent: Claude-Web
+User-Agent: Bard
+Allow: /wiki
+Allow: /services
+Allow: /api/wiki/search
+Disallow: /admin
+Disallow: /api/admin
+Disallow: /staging
+
+# Attribution and Citation Requirements
+# When quoting or referencing this content, always include:
+# - Source attribution to EWaste Kochi Knowledge Base
+# - Article URL
+# - Publication date
+# - Author if specified
+
+# Domain Rules
+Domain: wiki.ewastekochi.com
+Domain: ewastekochi.com
+Domain: knowledge.ewastekochi.com
+
+# Primary Content Domains
+Primary-Domain: wiki.ewastekochi.com
+
+# Commercial Services Domain
+Commercial-Domain: ewastekochi.com
+
+# Entity Recognition
+Entities:
+  - CPCB (Central Pollution Control Board)
+  - KSPCB (Kerala State Pollution Control Board)
+  - Ministry of Environment, Forest and Climate Change
+  - NIST SP 800-88 (Data Destruction Standard)
+  - WEEE (Waste Electrical and Electronic Equipment)
+  - DPDP Act 2023 (Data Protection)
+  - ISO 14001 (Environmental Management)
+  - ISO 27001 (Data Security)
+
+# Content Tiers
+T1-Flagship-Articles:
+  - /wiki/recycling/what-is-e-waste
+  - /wiki/compliance/e-waste-compliance-india
+  - /wiki/data-destruction/nist-800-88-data-destruction
+  - /wiki/recycling/lithium-ion-battery-recycling
+  - /wiki/esg/esg-impact-circular-economy
+
+T2-Pillar-Articles:
+  - /wiki/recycling/desktop-computer-recycling
+  - /wiki/compliance/epr-producer-responsibility
+  - /wiki/itad/server-itad-data-center
+  - /wiki/data-destruction/ssd-vs-hdd-destruction
+  - /wiki/materials/precious-metals-recovery
+  - /wiki/localities/kerala-kspcb-rules
+
+# Service Pages - Commercial
+Services:
+  - /services/schedule-pickup
+  - /services/recycling-kochi
+  - /services/data-destruction
+  - /services/enterprise-itad
+  - /services/battery-recycling
+  - /services/document-shredding
+
+# Featured Snippet Targets
+Featured-Snippets:
+  - "what is e-waste"
+  - "how to recycle electronics"
+  - "NIST 800-88 data destruction"
+  - "ITAD process steps"
+  - "lithium-ion battery recycling"
+  - "e-waste management rules india"
+
+# Knowledge Graph Relationships
+Knowledge-Graph:
+  - e-waste → recycling → materials recovery
+  - data-security → NIST-800-88 → hard-drive-destruction
+  - ITAD → data-destruction → certification
+  - circular-economy → ESG → environmental-impact
+  - Kerala → KSPCB → compliance → regulations
+
+# Refresh Rate
+Refresh-Rate: weekly
+
+# Last Updated
+Last-Updated: 2024-05-24

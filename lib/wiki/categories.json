@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "id": "recycling",
+      "name": "Recycling Encyclopedia",
+      "slug": "recycling",
+      "description": "Device-type specific recycling workflows and best practices",
+      "icon": "Recycle",
+      "order": 1,
+      "color": "emerald"
+    },
+    {
+      "id": "compliance",
+      "name": "Compliance Standards",
+      "slug": "compliance",
+      "description": "DPDP, CPCB, KSPCB, EPR and other regulatory frameworks",
+      "icon": "Shield",
+      "order": 2,
+      "color": "blue"
+    },
+    {
+      "id": "itad",
+      "name": "ITAD Knowledge Base",
+      "slug": "itad",
+      "description": "Enterprise asset disposition processes and standards",
+      "icon": "Server",
+      "order": 3,
+      "color": "violet"
+    },
+    {
+      "id": "data-destruction",
+      "name": "Data Destruction",
+      "slug": "data-destruction",
+      "description": "NIST 800-88, sanitization methods, and secure disposal",
+      "icon": "Trash2",
+      "order": 4,
+      "color": "red"
+    },
+    {
+      "id": "esg",
+      "name": "ESG Intelligence",
+      "slug": "esg",
+      "description": "Carbon footprint, circular economy, and sustainability metrics",
+      "icon": "Leaf",
+      "order": 5,
+      "color": "green"
+    },
+    {
+      "id": "materials",
+      "name": "Material Intelligence",
+      "slug": "materials",
+      "description": "Metal extraction, material recovery, and resource optimization",
+      "icon": "Zap",
+      "order": 6,
+      "color": "amber"
+    },
+    {
+      "id": "localities",
+      "name": "Locality Knowledge",
+      "slug": "localities",
+      "description": "Kerala and Kochi geo-specific guides and local regulations",
+      "icon": "MapPin",
+      "order": 7,
+      "color": "cyan"
+    },
+    {
+      "id": "glossary",
+      "name": "Glossary",
+      "slug": "glossary",
+      "description": "156+ A–Z definitions for e-waste, recycling, ITAD, compliance, and circular economy terms",
+      "icon": "Hash",
+      "order": 8,
+      "color": "violet"
+    }
+  ]
+}

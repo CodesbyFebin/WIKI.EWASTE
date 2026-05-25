@@ -1,0 +1,58 @@
+---
+title: "SSD vs HDD Data Destruction: Method Selection & Compliance"
+slug: ssd-vs-hdd-data-destruction
+category: data-destruction
+tier: T2
+author: "Febin Francis"
+datePublished: "2026-05-24"
+dateUpdated: "2026-05-24"
+readTime: 6
+description: "Comprehensive comparison of SSD and HDD data destruction methods with NIST 800-88 compliance guidance."
+keywords: ["SSD", "HDD", "data destruction", "NIST", "sanitization"]
+entities: ["NIST SP 800-88", "data destruction"]
+relatedArticles: []
+---
+
+## HDD vs SSD: Data Storage Fundamentals
+
+### HDD (Hard Disk Drive)
+- **Technology**: Magnetic storage on rotating platters
+- **Data Location**: Specific sectors with known addresses
+- **Erasure**: Overwriting accessible sectors effective
+- **Recovery Risk**: High (forensics can recover overwritten data)
+
+### SSD (Solid State Drive)
+- **Technology**: Flash memory cells (NAND chips)
+- **Data Location**: Wear-leveling spreads writes; some cells may be inaccessible
+- **Erasure**: Overwriting all accessible sectors may leave "hidden" data on reserved cells
+- **Recovery Risk**: Extremely high (reserved cells not addressed by standard commands)
+
+## Data Destruction Methods Comparison
+
+| Method | HDD | SSD | NIST 800-88 Compliant |
+|--------|-----|-----|----------------------|
+| **Clear (Logical)** | Low risk | High risk | No |
+| **Overwrite** | Acceptable | Risky (reserved cells) | Conditional |
+| **ATA Secure Erase** | Effective | Unreliable | Conditional |
+| **Cryptographic Erase** | Acceptable | Effective | Yes |
+| **Degaussing** | Effective | Ineffective | HDD only |
+| **Physical Destruction** | Most assurance | Most assurance | Yes |
+
+## Recommended Methods
+
+### For HDD
+1. **Primary**: ATA Secure Erase (fast, vendor-verified)
+2. **Secondary**: DoD 5220.22-M overwrite (3-7 passes)
+3. **Maximum**: Physical destruction (shredding)
+
+### For SSD
+1. **Primary**: Cryptographic Erasure (if encrypted beforehand)
+2. **Secondary**: Manufacturer's Secure Erase (if available & verified)
+3. **Maximum**: Physical Destruction (shredding, crushing)
+
+## Cost Implications
+
+- **HDD Overwrite**: INR 500-800 per drive
+- **SSD Cryptographic Erase**: INR 600-1,000 per drive
+- **Physical Destruction**: INR 1,500-3,000 per drive
+- **Mixed environment (80% HDD, 20% SSD)**: Recommend physical destruction as standard (avg INR 1,000/drive)

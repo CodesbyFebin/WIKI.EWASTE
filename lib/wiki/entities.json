@@ -1,0 +1,76 @@
+{
+  "entities": [
+    {
+      "id": "itad",
+      "name": "ITAD",
+      "fullName": "IT Asset Disposition",
+      "description": "The process of managing the end-of-life of computing assets in compliance with regulations",
+      "type": "methodology",
+      "relatedHubs": ["itad", "compliance"]
+    },
+    {
+      "id": "nist-sp-800-88",
+      "name": "NIST SP 800-88",
+      "fullName": "NIST Special Publication 800-88: Guidelines for Media Sanitization",
+      "description": "U.S. government standard for data destruction and sanitization methods",
+      "type": "standard",
+      "relatedHubs": ["data-destruction", "compliance"]
+    },
+    {
+      "id": "cpcb",
+      "name": "CPCB",
+      "fullName": "Central Pollution Control Board",
+      "description": "Indian regulatory body for environmental protection and e-waste management",
+      "type": "organization",
+      "relatedHubs": ["compliance", "recycling"]
+    },
+    {
+      "id": "kspcb",
+      "name": "KSPCB",
+      "fullName": "Karnataka State Pollution Control Board",
+      "description": "Karnataka state regulatory body for environmental compliance",
+      "type": "organization",
+      "relatedHubs": ["compliance", "localities"]
+    },
+    {
+      "id": "dpdp",
+      "name": "DPDP",
+      "fullName": "Digital Personal Data Protection Act 2023",
+      "description": "Indian legislation for data protection and privacy",
+      "type": "regulation",
+      "relatedHubs": ["compliance", "data-destruction"]
+    },
+    {
+      "id": "epr",
+      "name": "EPR",
+      "fullName": "Extended Producer Responsibility",
+      "description": "Regulatory framework requiring manufacturers to manage product end-of-life",
+      "type": "regulation",
+      "relatedHubs": ["compliance", "recycling", "esg"]
+    },
+    {
+      "id": "weee",
+      "name": "WEEE",
+      "fullName": "Waste Electrical and Electronic Equipment Directive",
+      "description": "EU and Indian regulation for electronic waste management",
+      "type": "regulation",
+      "relatedHubs": ["compliance", "recycling"]
+    },
+    {
+      "id": "kochi",
+      "name": "Kochi",
+      "fullName": "Kochi, Kerala",
+      "description": "Port city in Kerala, India - EWasteKochi headquarters location",
+      "type": "location",
+      "relatedHubs": ["localities"]
+    },
+    {
+      "id": "ewastekochi",
+      "name": "EWasteKochi",
+      "fullName": "EWasteKochi",
+      "description": "Circular economy company specializing in e-waste recycling and IT asset disposition",
+      "type": "organization",
+      "relatedHubs": ["recycling", "itad", "esg"]
+    }
+  ]
+}
